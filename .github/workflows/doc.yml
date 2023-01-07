@@ -6,11 +6,9 @@ on:
       - main
     paths:
       - .github/workflows/doc.yml
-      - 'docs/**'
   pull_request:
     paths:
       - .github/workflows/doc.yml
-      - 'docs/**'
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
@@ -32,7 +30,7 @@ jobs:
       - name: doc build (pr)
         run: |
           mkdir -p docs
-          echo "Fall Guys ~" > docs/index.html
+          echo "Fall Guys 2~" > docs/index.html
 
       - name: upload artifact
         if: github.event_name == 'push'
